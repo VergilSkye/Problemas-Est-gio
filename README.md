@@ -43,12 +43,26 @@ Soluções
     
 3. Problema matématico simples, encontrar a soma de todos os múltiplos de 3 e 5 entre 0 e 1000. Fiz um for de 0 a 1000 e caso o módulo de 3 ou 5 seja 0 isso significa que o numero é um múltiplos de um dos 2, então adiciono eles a variável sum
  ```python
-    sum=0
-    for i in range(0,1000):
-        if i % 3 == 0 or i % 5 == 0:
-            sum+=i    
-    print(sum)
+sum=0
+for i in range(0,1000):
+    if i % 3 == 0 or i % 5 == 0:
+        sum+=i    
+print(sum)
  ```
     
-4. Problema matématico simples, encontrar a soma de todos os numeros fibonacci pares até que o maior termo da sequencia não ultrapasse 4.000.000
-![alt text](http://www.cs.utsa.edu/~wagner/CS3343/fib/f1.png "Logo Title Text 1")
+4. Problema matématico simples, encontrar a soma de todos os numeros fibonacci pares até que o maior termo da sequencia não ultrapasse 4.000.000.
+
+
+![fibonacci algorithm](http://www.cs.utsa.edu/~wagner/CS3343/fib/f1.png "Logo Title Text 1")
+
+Coloquei os termos a e b como, o primeiro e segundo termo da formula respectivamente, e enquanto o primerio termo for menor que 4.000.000 verifique se ele for par, se sim some ele na variável total.
+
+``` python
+a,b = 1,1
+total =0
+while a <= 4000000:
+    if a % 2 == 0 :
+        total+=a
+    a,b = b, a+b
+print(total)
+```
